@@ -1,0 +1,25 @@
+#include <ctype.h>
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int countin(int counter);
+int main(void)
+{
+    string text = get_string("Text: ");
+    int words = 1;
+    int length = strlen(text);
+    int i = 0;
+    for (i = 0; length > i; i++)
+    {
+        if (text[i] == ' ')
+        {
+            if (text[i + 1] == ' ')
+            {
+                continue;
+            }
+            words++;
+        }
+    }
+    printf("words: %i", words);
+}
